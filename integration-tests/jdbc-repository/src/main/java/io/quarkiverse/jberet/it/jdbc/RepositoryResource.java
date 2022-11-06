@@ -3,7 +3,6 @@ package io.quarkiverse.jberet.it.jdbc;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.batch.runtime.JobInstance;
 import javax.inject.Inject;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -15,6 +14,8 @@ import javax.ws.rs.core.Response;
 
 import org.jberet.repository.JobRepository;
 import org.jberet.runtime.JobInstanceImpl;
+
+import jakarta.batch.runtime.JobInstance;
 
 @Path("/repository")
 @Produces(MediaType.APPLICATION_JSON)

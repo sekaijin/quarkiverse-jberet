@@ -3,7 +3,6 @@ package io.quarkiverse.jberet.deployment;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import javax.batch.operations.JobOperator;
 import javax.inject.Inject;
 
 import org.jberet.repository.JobRepository;
@@ -14,6 +13,7 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 
 import io.quarkiverse.jberet.runtime.QuarkusJobOperator;
 import io.quarkus.test.QuarkusUnitTest;
+import jakarta.batch.operations.JobOperator;
 
 public class JBeretInjectionTest {
     @RegisterExtension

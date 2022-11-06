@@ -1,6 +1,5 @@
 package io.quarkiverse.jberet.runtime;
 
-import javax.batch.operations.JobOperator;
 import javax.enterprise.inject.Produces;
 import javax.inject.Singleton;
 
@@ -10,6 +9,7 @@ import org.jberet.schedule.JobScheduler;
 import org.jberet.spi.JobOperatorContext;
 
 import io.quarkus.arc.DefaultBean;
+import jakarta.batch.operations.JobOperator;
 
 public class JBeretProducer {
     @Produces

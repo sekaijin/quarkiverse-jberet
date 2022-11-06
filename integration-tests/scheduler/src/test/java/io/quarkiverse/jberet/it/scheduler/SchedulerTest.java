@@ -12,8 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import javax.batch.runtime.BatchStatus;
-
 import org.jberet.rest.client.BatchClient;
 import org.jberet.rest.entity.JobExecutionEntity;
 import org.junit.jupiter.api.BeforeAll;
@@ -24,6 +22,7 @@ import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.Header;
+import jakarta.batch.runtime.BatchStatus;
 
 @QuarkusTest
 class SchedulerTest {

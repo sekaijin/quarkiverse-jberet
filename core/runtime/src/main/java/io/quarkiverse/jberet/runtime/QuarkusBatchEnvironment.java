@@ -4,7 +4,6 @@ import java.util.Properties;
 
 import javax.enterprise.inject.spi.Bean;
 import javax.enterprise.inject.spi.BeanManager;
-import javax.transaction.TransactionManager;
 
 import org.eclipse.microprofile.config.ConfigProvider;
 import org.jberet.creation.AbstractArtifactFactory;
@@ -16,6 +15,8 @@ import org.jberet.spi.JobTask;
 import org.jberet.spi.JobXmlResolver;
 
 import io.quarkus.arc.Arc;
+// import jakarta.transaction.TransactionManager;
+import jakarta.transaction.TransactionManager;
 
 class QuarkusBatchEnvironment implements BatchEnvironment {
     private final ArtifactFactory artifactFactory;

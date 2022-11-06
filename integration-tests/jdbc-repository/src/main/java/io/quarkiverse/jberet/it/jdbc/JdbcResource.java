@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.batch.runtime.JobInstance;
 import javax.inject.Inject;
 import javax.sql.DataSource;
 import javax.ws.rs.GET;
@@ -19,6 +18,8 @@ import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jberet.runtime.JobInstanceImpl;
+
+import jakarta.batch.runtime.JobInstance;
 
 @Path("/jdbc")
 @Produces(MediaType.APPLICATION_JSON)

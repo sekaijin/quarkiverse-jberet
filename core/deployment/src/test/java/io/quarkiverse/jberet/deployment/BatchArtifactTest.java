@@ -5,9 +5,6 @@ import static org.awaitility.Awaitility.await;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import javax.batch.operations.JobOperator;
-import javax.batch.runtime.BatchStatus;
-import javax.batch.runtime.JobExecution;
 import javax.inject.Inject;
 
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -16,6 +13,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import io.quarkus.test.QuarkusUnitTest;
+import jakarta.batch.operations.JobOperator;
+import jakarta.batch.runtime.BatchStatus;
+import jakarta.batch.runtime.JobExecution;
 
 public class BatchArtifactTest {
     @RegisterExtension

@@ -4,7 +4,6 @@ import java.io.InputStream;
 import java.io.Serializable;
 import java.util.Optional;
 
-import javax.batch.api.chunk.ItemReader;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -12,9 +11,11 @@ import javax.json.Json;
 import javax.json.JsonNumber;
 import javax.json.JsonObject;
 import javax.json.stream.JsonParser;
-import javax.transaction.Transactional;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+import jakarta.batch.api.chunk.ItemReader;
+import jakarta.transaction.Transactional;
 
 @Dependent
 @Named

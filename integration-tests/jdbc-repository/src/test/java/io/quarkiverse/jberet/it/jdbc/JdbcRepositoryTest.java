@@ -3,8 +3,8 @@ package io.quarkiverse.jberet.it.jdbc;
 import static io.quarkus.test.common.http.TestHTTPResourceManager.getUri;
 import static io.restassured.RestAssured.given;
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static javax.batch.runtime.BatchStatus.COMPLETED;
-import static javax.batch.runtime.BatchStatus.FAILED;
+import static jakarta.batch.runtime.BatchStatus.COMPLETED;
+import static jakarta.batch.runtime.BatchStatus.FAILED;
 import static javax.ws.rs.core.HttpHeaders.ACCEPT;
 import static javax.ws.rs.core.HttpHeaders.CONTENT_TYPE;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
@@ -15,6 +15,8 @@ import static org.hamcrest.Matchers.is;
 import java.util.Properties;
 
 import javax.enterprise.inject.Alternative;
+
+import  jakarta.batch.runtime.BatchStatus;
 
 import org.jberet.rest.client.BatchClient;
 import org.jberet.rest.entity.JobExecutionEntity;
@@ -63,7 +65,8 @@ class JdbcRepositoryTest {
         BatchClient batchClient = new BatchClient(getUri());
         JobExecutionEntity execution = batchClient.startJob("jdbc", new Properties());
         await().atMost(5, SECONDS)
-                .until(() -> COMPLETED.equals(batchClient.getJobExecution(execution.getExecutionId()).getBatchStatus()));
+                .until(() -> COMPLETED.equals(batchClient.getJobExecution(execution.getExecutionId())
+                .getBatchStatus()));
 
         given().get("/repository/instances/jdbc")
                 .then()

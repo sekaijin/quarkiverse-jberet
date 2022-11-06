@@ -7,9 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.Batchlet;
-import javax.batch.runtime.BatchStatus;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -23,6 +20,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import io.quarkus.test.QuarkusUnitTest;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.Batchlet;
+import jakarta.batch.runtime.BatchStatus;
 
 public class BatchletRestTest {
     @RegisterExtension

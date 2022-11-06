@@ -1,10 +1,10 @@
 package io.quarkiverse.jberet.deployment;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.Batchlet;
-import javax.batch.runtime.BatchStatus;
-
 import com.google.inject.Inject;
+
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.Batchlet;
+import jakarta.batch.runtime.BatchStatus;
 
 public class ArtifactBatchlet implements Batchlet {
     @Inject

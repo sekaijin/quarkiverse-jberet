@@ -71,10 +71,11 @@ import io.quarkus.deployment.builditem.nativeimage.NativeImageResourceBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.ReflectiveClassBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.RuntimeInitializedClassBuildItem;
 import io.quarkus.deployment.recording.RecorderContext;
-import io.quarkus.deployment.util.GlobUtil;
 import io.quarkus.runtime.ThreadPoolConfig;
 import io.quarkus.runtime.configuration.ConfigurationException;
 import io.quarkus.runtime.util.ClassPathUtils;
+// import io.quarkus.deployment.util.GlobUtil;
+import io.quarkus.util.GlobUtil;
 
 public class JBeretProcessor {
     private static final Logger log = Logger.getLogger("io.quarkiverse.jberet");

@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.transaction.TransactionManager;
-
 import org.eclipse.microprofile.config.spi.ConfigSourceProvider;
 import org.eclipse.microprofile.context.ManagedExecutor;
 import org.jberet.job.model.Decision;
@@ -33,6 +31,7 @@ import io.quarkus.arc.runtime.BeanContainer;
 import io.quarkus.runtime.RuntimeValue;
 import io.quarkus.runtime.ThreadPoolConfig;
 import io.quarkus.runtime.annotations.Recorder;
+import jakarta.transaction.TransactionManager;
 
 @Recorder
 public class JBeretRecorder {

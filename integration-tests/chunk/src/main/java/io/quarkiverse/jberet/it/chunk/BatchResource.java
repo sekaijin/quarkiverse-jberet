@@ -2,9 +2,6 @@ package io.quarkiverse.jberet.it.chunk;
 
 import java.util.Properties;
 
-import javax.batch.operations.JobOperator;
-import javax.batch.runtime.BatchRuntime;
-import javax.batch.runtime.JobExecution;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -13,6 +10,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
+import jakarta.batch.operations.JobOperator;
+import jakarta.batch.runtime.BatchRuntime;
+import jakarta.batch.runtime.JobExecution;
 
 /**
  * To verify that BatchRuntime.getJobOperator() returns the right operator in native mode.

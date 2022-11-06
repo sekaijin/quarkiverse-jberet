@@ -1,8 +1,8 @@
 package io.quarkiverse.jberet.deployment;
 
-import static javax.batch.runtime.Metric.MetricType.COMMIT_COUNT;
-import static javax.batch.runtime.Metric.MetricType.READ_COUNT;
-import static javax.batch.runtime.Metric.MetricType.WRITE_COUNT;
+import static jakarta.batch.runtime.Metric.MetricType.COMMIT_COUNT;
+import static jakarta.batch.runtime.Metric.MetricType.READ_COUNT;
+import static jakarta.batch.runtime.Metric.MetricType.WRITE_COUNT;
 import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,15 +14,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.AbstractItemReader;
-import javax.batch.api.chunk.AbstractItemWriter;
-import javax.batch.api.chunk.ItemProcessor;
-import javax.batch.operations.JobOperator;
-import javax.batch.runtime.BatchRuntime;
-import javax.batch.runtime.BatchStatus;
-import javax.batch.runtime.JobExecution;
-import javax.batch.runtime.Metric;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -33,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import io.quarkus.test.QuarkusUnitTest;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.batch.api.chunk.ItemProcessor;
+import jakarta.batch.operations.JobOperator;
+import jakarta.batch.runtime.BatchRuntime;
+import jakarta.batch.runtime.BatchStatus;
+import jakarta.batch.runtime.JobExecution;
+import jakarta.batch.runtime.Metric;
 
 public class ChunkPartitionTest {
     @RegisterExtension

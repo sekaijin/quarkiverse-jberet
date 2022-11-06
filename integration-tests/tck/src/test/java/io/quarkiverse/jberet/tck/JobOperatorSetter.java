@@ -2,9 +2,9 @@ package io.quarkiverse.jberet.tck;
 
 import java.lang.reflect.Field;
 
-import javax.batch.operations.JobOperator;
-
 import com.ibm.jbatch.tck.utils.JobOperatorBridge;
+
+import jakarta.batch.operations.JobOperator;
 
 public class JobOperatorSetter {
     static void setJobOperator(Object instance, JobOperator jobOperator) throws Exception {
